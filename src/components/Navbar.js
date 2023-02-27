@@ -63,7 +63,7 @@ const Navbar = class extends React.Component {
                             <img
                                 src={logo}
                                 alt="Kaldi"
-                                style={{ scale: "2.5", margin: "0 20px" }}
+                                style={{ scale: '2.5', margin: "0 50px" }}
                             />
                         </Link>
                     </div>
