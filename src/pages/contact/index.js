@@ -12,6 +12,7 @@ export default class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isValidated: false };
+    this.style = { listStyle: "none" };
   }
 
   handleChange = (e) => {
@@ -39,7 +40,16 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1>Contact Us</h1>
+              <ul style={this.style}>
+                <li>Megh: +91 8310428703</li>
+                <li>Rohit: +91 9443909004</li>
+                <li>Number</li>
+                <li>Email</li>
+                <li>Handle1</li>
+                <li>Handle2</li>
+              </ul>
+              <h1>FAQ</h1>
               <form
                 name="contact"
                 method="post"
