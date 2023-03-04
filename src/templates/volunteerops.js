@@ -14,7 +14,6 @@ const VolunteerPage = ({
     description,
     points
 }) => {
-    console.log(points)
     return (
         <Layout>
             <div className="content outer">
@@ -23,9 +22,9 @@ const VolunteerPage = ({
                     <div>
                         <p>{ description }</p>
                         <ol>
-                            { points.map(({ point }) => <li><strong>{point.title}:</strong> {point.description}</li>)}
+                            { points.map(({ point }) => <li key={ point.key }><strong>{point.title}:</strong> {point.description}</li>)}
                         </ol>
-                        <p>
+                        <div>
                             If you're interested in volunteering with us, please contact
                             <ul style={{ listStyle: 'none' }}>
                                 <li>Rohit: +91 94439 09004</li>
@@ -33,7 +32,7 @@ const VolunteerPage = ({
                             </ul>
                             Or drop a message in the contact section.<br/>
                             We look forward to working with you to create a better world for future generations.
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -72,6 +71,7 @@ export const productPageQuery = graphql`
                 description,
                 points {
                     point {
+                        key,
                         title,
                         description
                     }
