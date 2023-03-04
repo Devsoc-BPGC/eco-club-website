@@ -21,7 +21,7 @@ const ResourcesPage = ({
                 </ul>
                 <h2 className="title is-2">Our Blogs</h2>
                 <ul style={{ listStyle: 'none' }}>
-                    { blogs.map(blog => <li key={ blog.key }><Link to={ blog.blog }>{ blog.blog }</Link></li>) }
+                    { blogs.map(blog => <li key={ blog.key }><Link to={ `/blog/${ blog.blog }` }>{ blog.blog }</Link></li>) }
                 </ul>
             </div>
         </Layout>
